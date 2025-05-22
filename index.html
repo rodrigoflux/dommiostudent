@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dommio - Descuentos Exclusivos para Estudiantes en México</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+        <div class="logo">
+            <span class="primary-word">DOMMIO!</span>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Alternar menú de navegación">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#how-it-works-section">¿Cómo funciona?</a></li>
+                <li><a href="#categories-section">Categorías de descuentos populares</a></li>
+                <li><a href="#for-businesses-section">Para empresas</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#contact-us-section" class="cta-btn">¡Regístrate!</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="video-overlay"></div>
+    <video autoplay muted loop id="heroVideo">
+        <source src="videos/students-socializing-campus.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+    <div class="hero-content">
+        <h1>Ayudamos a estudiantes a ahorrar en grande</h1>
+        <p>En Dommio creemos que la educación debe ser más accesible. Nuestra misión es ayudar a estudiantes universitarios, maestros y personal académico en México a ahorrar en lo que más importa, conectando a nuestra comunidad con marcas líderes nacionales e internacionales, así como con negocios locales queridos por los estudiantes.</p>
+        <div class="cta-buttons">
+            <a href="#contact-us-section" class="cta-primary">Quiero saber más</a>
+        </div>
+    </div>
+  </section>
+
+  <!-- Move Nuestra Plataforma Próximamente section here -->
+  <section class="our-platform">
+    <div class="container">
+        <div class="section-header">
+            <h2>Nuestra plataforma próximamente</h2>
+            <p>Una experiencia diseñada para que encontrar y usar descuentos sea más fácil que nunca.</p>
+        </div>
+        <div class="platform-content">
+            <div class="features">
+                <div class="feature">
+                    <h3>Búsqueda Inteligente</h3>
+                    <p>Encuentra descuentos por categoría, marca, ubicación o palabra clave con filtros avanzados.</p>
+                </div>
+                <div class="feature">
+                    <h3>Verificación Sencilla</h3>
+                    <p>Un proceso rápido y seguro para validar tu estatus de estudiante y acceder a todas las ofertas.</p>
+                </div>
+                <div class="feature">
+                    <h3>Alertas Personalizadas</h3>
+                    <p>Recibe notificaciones sobre nuevos descuentos de tus marcas y categorías favoritas.</p>
+                </div>
+                <div class="feature">
+                    <h3>Acceso Móvil Total</h3>
+                    <p>Utiliza Dommio desde cualquier dispositivo, en cualquier momento y lugar.</p>
+                </div>
+                <div class="feature">
+                    <h3>Guardar Favoritos</h3>
+                    <p>Guarda los descuentos que te interesan para usarlos más tarde, ¡no te pierdas ninguna oferta!</p>
+                </div>
+            </div>
+            <div class="platform-visual" style="display: flex; justify-content: flex-end;">
+                <!-- INTEGRACIÓN DEMO REACT DOMMIO LOCAL: El siguiente iframe muestra la demo interactiva desde tu servidor local de React. -->
+                <iframe src="http://localhost:3000" title="Demo Interactiva Dommio" style="width:400px;min-height:660px;height:660px;max-width:100%;border-radius:16px;border:2px solid #E2E8F0;box-shadow:0 15px 35px rgba(44,62,80,0.10);background:#fff;" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="tabs-section" id="how-it-works-section"> <!-- ID remains for nav link -->
+    <section class="what-we-do-title">
+      <div class="container">
+          <h2>Más que solo descuentos</h2>
+          <p>Dommio conecta a estudiantes con las marcas que aman y ayuda a las empresas a interactuar con el valioso grupo demográfico universitario. Un ganar-ganar para todos.</p>
+      </div>
+    </section>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" data-tab="students">Para estudiantes</div>
+            <div class="tab" data-tab="businesses">Para empresas</div>
+        </div>
+
+        <div id="students-content" class="tab-content active">
+            <div class="service-boxes">
+                <div class="service-box">
+                    <i class="bi bi-piggy-bank-fill service-icon"></i>
+                    <h3>Ahorra en grande</h3>
+                    <p>Accede a ofertas exclusivas en comida, moda, tecnología, libros, viajes y todo lo que necesitas para tu vida universitaria. Maestros y personal académico también pueden aprovechar estos beneficios.</p>
+                </div>
+                <div class="service-box">
+                     <i class="bi bi-stars service-icon"></i>
+                    <h3>Descubre marcas top</h3>
+                    <p>Encuentra ofertas de marcas líderes nacionales e internacionales, verificadas y en un solo lugar. También disponibles para maestros y personal académico.</p>
+                </div>
+                <div class="service-box">
+                    <i class="bi bi-patch-check-fill service-icon"></i>
+                    <h3>Verificado y fácil de usar</h3>
+                    <p>Proceso simple de verificación estudiantil para desbloquear un mundo de descuentos. Fácil de navegar y canjear. Maestros y personal académico también pueden registrarse.</p>
+                </div>
+                <div class="service-box">
+                     <i class="bi bi-phone-fill service-icon"></i>
+                    <h3>Descuentos en tu móvil</h3>
+                    <p>Nuestra plataforma será totalmente compatible con móviles, para que encuentres y uses descuentos donde estés. Disponible para estudiantes, maestros y personal académico.</p>
+                </div>
+                 <div class="service-box">
+                    <i class="bi bi-gift-fill service-icon"></i>
+                    <h3>Ofertas realmente exclusivas</h3>
+                    <p>Muchos de nuestros descuentos no los encontrarás en ningún otro lado, negociados especialmente para estudiantes Dommio, maestros y personal académico.</p>
+                </div>
+                <div class="service-box">
+                    <i class="bi bi-search service-icon"></i>
+                    <h3>Búsqueda y filtro sencillos</h3>
+                    <p>Encuentra rápidamente las ofertas que quieres por categoría, marca o palabra clave. Ahorrar nunca fue tan fácil para estudiantes, maestros y personal académico.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="businesses-content" class="tab-content">
+            <div class="service-boxes">
+                <div class="service-box">
+                    <i class="bi bi-bullseye service-icon"></i>
+                    <h3>Comunidad Estudiantil Auténtica</h3>
+                    <p>Conecta con una comunidad real de estudiantes, maestros y personal académico en México. Ayuda a quienes más lo necesitan mientras creces con propósito. Desde marcas globales hasta restaurantes locales, todos son bienvenidos en Dommio.</p>
+                </div>
+                <div class="service-box">
+                    <i class="bi bi-graph-up-arrow service-icon"></i>
+                    <h3>Crecimiento con Impacto</h3>
+                    <p>Colabora para hacer la vida universitaria más asequible. Nuestra plataforma funciona para negocios de todos los tamaños: grandes corporativos, cadenas nacionales y pequeños negocios familiares pueden competir y conectar con estudiantes por igual.</p>
+                </div>
+                <div class="service-box">
+                    <i class="bi bi-megaphone-fill service-icon"></i>
+                    <h3>Conexiones Significativas</h3>
+                    <p>Genera engagement auténtico y construye vínculos genuinos con jóvenes que valoran marcas comprometidas con su bienestar. La diversidad de opciones crea un ecosistema completo para estudiantes.</p>
+                </div>
+                <div class="service-box">
+                    <i class="bi bi-bar-chart-line-fill service-icon"></i>
+                    <h3>Transparencia y Aprendizaje</h3>
+                    <p>Accede a datos claros sobre el impacto de tus ofertas y aprende junto a nosotros cómo apoyar mejor a la comunidad estudiantil. Tanto grandes marcas como negocios locales pueden beneficiarse de nuestras herramientas.</p>
+                </div>
+                <div class="service-box">
+                    <i class="bi bi-lightbulb-fill service-icon"></i>
+                    <h3>Colaboración con Propósito</h3>
+                    <p>Buscamos marcas líderes y negocios locales que quieran marcar la diferencia. Juntos, podemos hacer que la educación y la vida universitaria sean más accesibles para todos.</p>
+                </div>
+                <div class="service-box">
+                    <i class="bi bi-people-fill service-icon"></i>
+                    <h3>Relaciones Duraderas</h3>
+                    <p>Construye relaciones de valor con la próxima generación. Creemos en alianzas auténticas, no en ventas rápidas. Todos los tamaños de negocio son parte de nuestra comunidad diversa de marcas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="why-work-with-us" id="for-businesses-section"> <!-- ID remains for nav link -->
+    <div class="container">
+        <div class="why-work-with-us-header">
+            <div class="why-work-with-us-title">
+                <h1 class="dreambig">
+                    <span>CONSTRUYENDO ALGO ESPECIAL</span><br>
+                    <span class="highlight">PARA ESTUDIANTES MEXICANOS</span>
+                </h1>
+            </div>
+            <div class="why-work-with-us-description">
+                <h3>UNIMOS MARCAS Y ESTUDIANTES CON PROPÓSITO</h3>
+                <p>En Dommio, creemos que todos los estudiantes merecen acceso a oportunidades y ahorros reales. Nuestra meta es hacer la vida universitaria más asequible y apoyar el desarrollo académico a través de alianzas genuinas con marcas que comparten nuestros valores. Trabajamos tanto con marcas líderes como con negocios locales queridos por la comunidad estudiantil - desde cadenas internacionales hasta la taquería favorita del campus. Si eres una empresa que quiere ayudar a la comunidad estudiantil y crecer de manera responsable, queremos conocerte.</p>
+                <a href="#contact-us-section" class="cta-button">Colabora con Nosotros</a>
+            </div>
+        </div>
+        <div class="services-slider">
+            <div class="services-slide">
+                <div class="service-item">
+                    <div class="icon-placeholder">
+                        <i class="bi bi-wallet2 service-icon-large"></i>
+                    </div>
+                    <h3>AHORRO INTELIGENTE</h3>
+                    <p>Maximizamos el poder adquisitivo de los estudiantes con descuentos reales y verificados en lo que más necesitan.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon-placeholder">
+                         <i class="bi bi-link-45deg service-icon-large"></i>
+                    </div>
+                    <h3>CONEXIÓN DIRECTA</h3>
+                    <p>Facilitamos que las marcas lleguen de forma efectiva al público estudiantil, generando lealtad temprana.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon-placeholder">
+                         <i class="bi bi-hand-thumbs-up-fill service-icon-large"></i>
+                    </div>
+                    <h3>EXPERIENCIA SIMPLE</h3>
+                    <p>Una plataforma intuitiva y fácil de usar tanto para estudiantes que buscan ofertas como para empresas que las publican.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="industries" id="categories-section"> <!-- ID remains for nav link -->
+    <div class="container">
+        <div class="section-title">
+            <h2>Categorías de descuentos populares</h2>
+            <p>Encuentra ofertas de marcas líderes y negocios locales en una amplia variedad de categorías pensadas para ti. Estudiantes, maestros y personal académico pueden aprovecharlas.</p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step">
+              <div class="icon-container">
+                  <i class="bi bi-egg-fried industry-icon"></i>
+              </div>
+              <h3>Comida y Bebida</h3>
+              <p>Restaurantes, cafeterías, comida rápida, supermercados y más.</p>
+          </div>
+          <div class="process-step">
+              <div class="icon-container">
+                   <i class="bi bi-pc-display industry-icon"></i>
+              </div>
+              <h3>Tecnología</h3>
+              <p>Laptops, software, accesorios, celulares y gadgets.</p>
+          </div>
+          <div class="process-step">
+                <div class="icon-container">
+                    <i class="bi bi-train-front-fill industry-icon"></i>
+                </div>
+                <h3>Viajes y Transporte</h3>
+                <p>Boletos de autobús, vuelos, hospedaje y servicios de transporte.</p>
+            </div>
+          <div class="process-step">
+              <div class="icon-container">
+                   <i class="bi bi-controller industry-icon"></i>
+              </div>
+              <h3>Entretenimiento</h3>
+              <p>Cine, conciertos, streaming, videojuegos y eventos.</p>
+          </div>
+          <div class="process-step">
+              <div class="icon-container">
+                   <i class="bi bi-universal-access industry-icon"></i>
+              </div>
+              <h3>Moda y Accesorios</h3>
+              <p>Ropa, calzado, joyería y artículos personales para tu estilo.</p>
+          </div>
+           <div class="process-step">
+              <div class="icon-container">
+                   <i class="bi bi-book-half industry-icon"></i>
+              </div>
+              <h3>Educación y Libros</h3>
+              <p>Material didáctico, cursos online, librerías y papelerías.</p>
+          </div>
+      </div>
+  </section>
+
+  <section class="contact-us" id="contact-us-section">
+    <div class="container">
+      <h2>¡Sé el primero en enterarte!</h2>
+      <p>Regístrate para recibir notificaciones sobre el lanzamiento de Dommio, ofertas exclusivas y cómo tu empresa puede participar. Estudiantes, maestros y personal académico pueden registrarse.</p>
+      <form id="contactForm">
+        <label for="from_name" class="visually-hidden">Tu Nombre</label>
+        <input type="text" id="from_name" name="from_name" placeholder="Tu Nombre" required>
+        <label for="from_email" class="visually-hidden">Tu Correo Electrónico</label>
+        <input type="email" id="from_email" name="from_email" placeholder="Tu Correo Electrónico" required>
+        <label for="user_type" class="visually-hidden">Soy un:</label>
+        <select id="user_type" name="user_type" required>
+            <option value="" disabled selected>Soy un...</option>
+            <option value="brand">Marca interesada en ayudar estudiantes</option>
+            <option value="local">Negocio local interesado en ayudar estudiantes</option>
+            <option value="agency">Agencia que quiere apoyar la educación</option>
+            <option value="university">Universidad/Institución Educativa</option>
+            <option value="student">Estudiante interesado</option>
+            <option value="other">Otro</option>
+        </select>
+        <label for="message" class="visually-hidden">Mensaje (opcional)</label>
+        <textarea id="message" name="message" placeholder="Mensaje (opcional)"></textarea>
+        <button type="submit" id="submitButton">Enviar información</button>
+        <div id="formResponse"></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+        <h2>Preguntas frecuentes</h2>
+        <div class="faq-item">
+            <button class="faq-question">¿Qué es Dommio?</button>
+            <div class="faq-answer">
+                <p>Dommio será una plataforma digital diseñada para conectar a estudiantes universitarios en México con descuentos y ofertas exclusivas de una amplia variedad de marcas y servicios. Nuestro objetivo es ayudar a los estudiantes a ahorrar dinero y a las empresas a llegar a este importante grupo demográfico. Maestros y personal académico también pueden participar y aprovechar los beneficios.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Cuándo se lanzará Dommio?</button>
+            <div class="faq-answer">
+                <p>Estamos trabajando arduamente para lanzar Dommio lo antes posible. ¡Regístrate en nuestro formulario de contacto para ser el primero en saber la fecha exacta de lanzamiento y recibir noticias exclusivas!</p>
+            </div>
+        </div>
+         <div class="faq-item">
+            <button class="faq-question">¿Cómo funcionará la verificación?</button>
+            <div class="faq-answer">
+                <p>Implementaremos un proceso de verificación simple y seguro para asegurar que solo los estudiantes universitarios, maestros y personal académico activos puedan acceder a los descuentos. Daremos más detalles cerca del lanzamiento.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Cuál es el modelo de colaboración?</button>
+            <div class="faq-answer">
+                <p>En Dommio creemos en alianzas auténticas y transparentes. Trabajamos bajo un modelo de comisión por venta generada, sin costos fijos ni compromisos a largo plazo. Así, las marcas pueden ayudar a estudiantes y crecer de manera responsable.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Por qué enfocarse en estudiantes?</button>
+            <div class="faq-answer">
+                <p>Los estudiantes en México enfrentan retos económicos reales. Nuestra misión es hacer la vida universitaria más asequible y apoyar el desarrollo académico. Maestros y personal académico también forman parte de nuestra comunidad y pueden beneficiarse de Dommio.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Cómo puedo empezar a colaborar?</button>
+            <div class="faq-answer">
+                <p>Solo completa nuestro formulario de contacto y selecciona "Marca interesada en ayudar estudiantes". Nos pondremos en contacto para explorar juntos cómo tu marca puede aportar valor a la comunidad estudiantil.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Trabajan con empresas locales pequeñas?</button>
+            <div class="faq-answer">
+                <p>¡Absolutamente! Dommio es para todos: desde marcas globales hasta el café local favorito de los estudiantes. Creemos que la diversidad de opciones beneficia a toda la comunidad estudiantil, incluyendo a maestros y personal académico.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Dommio</h3>
+        <p>Conectando estudiantes con ahorros exclusivos. Próximamente en México.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#how-it-works-section">¿Cómo funciona?</a></li>
+          <li><a href="#categories-section">Categorías de descuentos populares</a></li>
+          <li><a href="#for-businesses-section">Para empresas</a></li>
+           <li><a href="#contact-us-section">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p>Email: <a href="mailto:info@dommio.mx">info@dommio.mx</a> (Ejemplo)</p>
+        <p>Ciudad de México, México</p>
+      </div>
+      <div class="footer-section social">
+        <h3>Síguenos</h3>
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Dommio. Todos los Derechos Reservados. <a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a> (Próximamente)</p>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="JS/script.js"></script>
+</body>
+</html>
