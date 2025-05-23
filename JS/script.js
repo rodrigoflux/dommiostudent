@@ -35,18 +35,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Hero Video Pause (remains similar, adjust video or remove if not used)
   const video = document.getElementById('heroVideo');
+  const overlay = document.getElementById('heroOverlay');
   if (video) {
+      video.playbackRate = 0.90;
       video.play().then(() => {
           console.log("Video del héroe iniciado.");
-          // setTimeout(() => { // Optional: pause video if desired
-          //     if (!video.paused) {
-          //         video.pause();
-          //         console.log("Video del héroe pausado después del tiempo.");
-          //     }
-          // }, 7000);
       }).catch(error => {
           console.warn("Autoplay del video del héroe prevenido:", error);
       });
+      // Ensure overlay is always visible after video ends
+      video.addEventListener('ended', function() {
+          if (overlay) {
+              overlay.style.display = 'block';
+              overlay.style.opacity = '1';
+          }
+          // Fade out the video smoothly
+          video.style.transition = 'opacity 1.2s';
+          video.style.opacity = '0.25';
+      });
+      // Make sure overlay is visible initially as well
+      if (overlay) {
+          overlay.style.display = 'block';
+          overlay.style.opacity = '1';
+      }
   }
 
   // FAQ Accordion Functionality (remains the same)

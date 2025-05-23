@@ -429,7 +429,6 @@ header nav ul li a:hover, header nav ul li a:focus {
   border-radius: var(--radius-md);
 }
 .services-slider {
-  overflow: hidden;
   margin-top: 40px;
 }
 .services-slide {
@@ -574,11 +573,21 @@ header nav ul li a:hover, header nav ul li a:focus {
 .section-header h2 {
   margin-bottom: 15px;
 }
-.section-header p {
-  font-size: 1.15rem;
+.section-header p, .section-title p, .what-we-do-title p, .faq-section > .container > p {
+  font-size: 1.22rem;
   color: var(--text-color-secondary);
   max-width: 700px;
-  margin: 0 auto;
+  margin: 24px auto 0 auto;
+  text-align: center;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+  animation: subtitleFadeIn 0.8s;
+}
+@keyframes subtitleFadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 .platform-content {
   display: flex;
@@ -922,7 +931,13 @@ footer {
   .dreambig { text-align: center; }
   .why-work-with-us-description { text-align: center; }
   .why-work-with-us-description .cta-button { margin: 20px auto 0; }
-  .platform-content { gap: 30px; }
+  .platform-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .platform-visual {
+    display: none;
+  }
   .industries, .our-platform, .contact-us { padding: 60px 0; }
   .footer-container { grid-template-columns: 1fr; text-align: center; gap: 30px; }
   .footer-section h3 { margin-bottom: 15px; }
@@ -944,6 +959,11 @@ footer {
   }
   .industry-icon {
     font-size: 1.2rem;
+  }
+  .section-header p, .section-title p, .what-we-do-title p, .faq-section > .container > p {
+    font-size: 1.05rem;
+    margin-top: 16px;
+    padding: 0;
   }
 }
 @media (max-width: 480px) {
