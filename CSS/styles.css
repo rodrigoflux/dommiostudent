@@ -910,9 +910,17 @@ footer {
   .mobile-menu-toggle { display: block; order: 3; }
   header .logo { flex-grow: 1; font-size: 1.3rem; }
   header .cta-btn { order: 2; margin-left: 15px; padding: 10px 18px; font-size: 0.98rem; }
-  header nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); box-shadow: 0 5px 10px rgba(44,62,80,0.10); padding: 15px 0; width: 100%; z-index: 999; }
-  header nav.active { display: block; animation: slideDown 0.3s forwards; }
-  @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+  header nav {
+    display: none;
+    height: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+  }
+  header nav.active {
+    display: block;
+    height: auto !important;
+    overflow: visible !important;
+  }
   header nav ul { flex-direction: column; align-items: center; width: 100%; }
   header nav ul li { margin: 10px 0; width: 100%; text-align: center; }
   header nav ul li a { padding: 14px 0; display: block; width: 100%; border-bottom: 1.5px solid var(--border-color); }
