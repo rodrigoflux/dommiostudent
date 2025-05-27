@@ -172,12 +172,15 @@ header .container {
   gap: 18px;
 }
 header .logo {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 56px;
   font-size: 2rem;
   font-weight: 900;
   font-family: var(--heading-font);
   color: var(--dommio-blue);
-  display: flex;
-  align-items: center;
   letter-spacing: -1px;
 }
 header nav ul {
@@ -227,9 +230,12 @@ header nav ul li a:hover, header nav ul li a:focus {
 
 /* --- HEADER CTA BUTTON (DESKTOP/LAPTOP) --- */
 header .cta-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
   margin-left: 28px;
-  padding: 14px 36px;
+  padding: 0 36px;
   font-size: 1.12rem;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-btn);
@@ -891,77 +897,112 @@ header .cta-btn {
   margin: 0;
 }
 
-/* --- FOOTER --- */
+/* --- MODERN, ATTRACTIVE FOOTER --- */
 footer {
   background: var(--footer-background);
   color: #e2e8f0;
-  padding: 60px 0 20px;
+  padding: 48px 0 20px;
   font-family: var(--body-font);
+  border-top: 3px solid var(--dommio-accent-cta);
 }
+
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 36px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 18px;
 }
+
 .footer-section h3 {
-  font-size: 1.15rem;
-  color: var(--white);
-  margin-bottom: 20px;
+  font-size: 1.08rem;
+  color: var(--dommio-accent-cta);
+  margin-bottom: 12px;
   font-family: var(--heading-font);
-  font-weight: 800;
+  font-weight: 900;
+  letter-spacing: -0.5px;
 }
+
 .footer-section p,
 .footer-section ul li {
-  font-size: 0.98rem;
-  line-height: 1.8;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 8px;
+  color: #e2e8f0;
 }
+
 .footer-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .footer-section ul li a {
   color: #e2e8f0;
   text-decoration: none;
   transition: color 0.2s;
 }
+
 .footer-section ul li a:hover {
-  color: var(--dommio-accent-cta);
+  color: var(--dommio-accent-secondary);
 }
+
 .footer-section .social a {
   display: inline-block;
-  margin-right: 15px;
-  transition: transform 0.2s, color 0.2s;
-  color: #e2e8f0;
-  font-size: 1.5rem;
+  margin-right: 12px;
+  color: var(--dommio-accent-secondary);
+  font-size: 1.4rem;
+  border-radius: 50%;
+  padding: 6px;
+  transition: color 0.2s, background 0.2s;
 }
+
 .footer-section .social a:hover {
-  transform: scale(1.1);
   color: var(--dommio-accent-cta);
+  background: rgba(255,107,107,0.10);
 }
+
 .footer-bottom {
   text-align: center;
-  padding-top: 40px;
-  margin-top: 40px;
-  border-top: 1.5px solid #22344a;
-  font-size: 0.92rem;
-}
-.footer-bottom p {
-  margin: 0;
+  padding-top: 28px;
+  margin-top: 28px;
+  border-top: 1px solid #22344a;
+  font-size: 0.98rem;
   color: #b0b8c1;
 }
+
 .footer-bottom a {
-  color: #e2e8f0;
+  color: var(--dommio-accent-secondary);
   text-decoration: none;
   transition: color 0.2s;
 }
+
 .footer-bottom a:hover {
   color: var(--dommio-accent-cta);
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 18px;
+    padding: 0 6px;
+  }
+  .footer-section .social {
+    margin-top: 10px;
+  }
+  .footer-section .social a {
+    margin: 0 7px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+  .footer-bottom {
+    font-size: 0.92rem;
+    padding-top: 18px;
+    margin-top: 18px;
+  }
 }
 
 /* --- RESPONSIVE --- */
@@ -1017,21 +1058,8 @@ footer {
   header .logo { flex-grow: 1; font-size: 1.3rem; }
   header .cta-btn { order: 2; margin-left: 15px; padding: 10px 18px; font-size: 0.98rem; }
   header nav {
-    display: none;
-    height: 0 !important;
-    overflow: hidden !important;
-    padding: 0 !important;
+    display: none !important;
   }
-  header nav.active {
-    display: block;
-    height: auto !important;
-    overflow: visible !important;
-  }
-  header nav ul { flex-direction: column; align-items: center; width: 100%; }
-  header nav ul li { margin: 10px 0; width: 100%; text-align: center; }
-  header nav ul li a { padding: 14px 0; display: block; width: 100%; border-bottom: 1.5px solid var(--border-color); }
-  header nav ul li:last-child a { border-bottom: none; }
-  header nav ul li a::after { display: none; }
   .hero { height: 85vh; } 
   .hero-content h1 { font-size: clamp(1.2rem, 6vw, 2rem); margin-bottom: 20px; }
   .hero-content p { font-size: 1rem; padding: 0 15px; margin-bottom: 30px; }
@@ -1332,7 +1360,17 @@ section {
 .tabs-section .decor-2b { width: 80px; height: 40px; top: 30px; left: 30px; background: var(--dommio-blue); border-radius: 50% / 40%; opacity: 0.08; }
 .tabs-section .decor-2c { top: 80px; right: 120px; }
 .tabs-section .decor-2c.squiggle { }
-.why-work-with-us .decor-3 { width: 140px; height: 140px; top: 60%; left: 70%; background: radial-gradient(circle at 50% 50%, var(--dommio-accent-secondary) 60%, transparent 100%); border-radius: 50%; }
+.why-work-with-us .decor-3 {
+  width: 140px;
+  height: 140px;
+  top: 10px;
+  left: auto;
+  right: 10px;
+  background: radial-gradient(circle at 50% 50%, var(--dommio-accent-secondary) 60%, transparent 100%);
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.13;
+}
 .why-work-with-us .decor-3b { width: 0; height: 0; top: 30px; left: 40px; }
 .why-work-with-us .decor-3b.triangle { }
 .industries .decor-4 { width: 100px; height: 100px; top: 10%; right: 10%; background: radial-gradient(circle at 50% 50%, var(--dommio-blue) 60%, transparent 100%); border-radius: 50%; }
@@ -1340,3 +1378,9 @@ section {
 .industries .decor-4b.squiggle { }
 .contact-us .decor-5 { width: 160px; height: 160px; bottom: 0; left: 0; background: radial-gradient(circle at 60% 40%, var(--dommio-accent-cta) 60%, transparent 100%); border-radius: 50%; }
 .contact-us .decor-5b { width: 60px; height: 100px; top: 30px; right: 40px; background: var(--dommio-accent-secondary); border-radius: 50% / 40%; opacity: 0.09; }
+
+@media (max-width: 768px) {
+  header .cta-btn {
+    display: none !important;
+  }
+}
