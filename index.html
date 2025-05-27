@@ -18,9 +18,10 @@
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
+                <li><a href="#plataforma">Plataforma</a></li>
                 <li><a href="#how-it-works-section">¿Cómo funciona?</a></li>
-                <li><a href="#categories-section">Categorías de descuentos populares</a></li>
-                <li><a href="#for-businesses-section">Para empresas</a></li>
+                <li><a href="#categories-section">Categorías de descuentos</a></li>
+                <li><a href="#faq-section">Preguntas Frecuentes</a></li>
             </ul>
         </nav>
         <div class="header-actions">
@@ -36,8 +37,8 @@
         Tu navegador no soporta la etiqueta de video.
     </video>
     <div class="hero-content">
-        <h1>Vive más, gasta menos</h1>
-        <p>En Dommio! creemos que ser estudiante es una etapa increíble.<br><br>Te ayudamos a disfrutar al máximo tu vida universitaria con descuentos exclusivos, conectando a nuestra comunidad estudiantil con tus marcas y negocios favoritos para que vivas más&nbsp;y&nbsp;gastes&nbsp;menos.</p>
+        <h1>¡Vive más, <span class="hero-accent">gasta menos!</span></h1>
+        <p class="hero-desc"><i class="bi bi-stars hero-icon"></i> En Dommio! creemos que <span class="hero-highlight">ser estudiante es una etapa increíble</span>.<br><br>Aprovecha la vida universitaria con descuentos únicos. Conectamos estudiantes con las mejores marcas y sus negocios locales favoritos para que vivan más y gasten menos.</p>
         <div class="cta-buttons">
             <a href="#contact-us-section" class="cta-primary">Quiero saber más</a>
         </div>
@@ -45,10 +46,12 @@
   </section>
 
   <!-- Move Nuestra Plataforma Próximamente section here -->
-  <section class="our-platform">
+  <section class="our-platform" id="plataforma">
+    <div class="section-decor decor-1 circle"></div>
+    <div class="section-decor decor-1b oval"></div>
     <div class="container">
         <div class="section-header">
-            <h2>Nuestra plataforma próximamente</h2>
+            <h2>Nuestra plataforma</h2>
             <p>Una experiencia diseñada para que encontrar y usar descuentos sea más fácil que nunca.</p>
         </div>
         <div class="platform-content">
@@ -83,6 +86,9 @@
   </section>
 
   <section class="tabs-section" id="how-it-works-section"> <!-- ID remains for nav link -->
+    <div class="section-decor decor-2 circle"></div>
+    <div class="section-decor decor-2b oval"></div>
+    <div class="section-decor decor-2c squiggle"></div>
     <section class="what-we-do-title">
       <div class="container">
           <h2>Más que solo descuentos</h2>
@@ -168,6 +174,8 @@
   </section>
 
   <section class="why-work-with-us" id="for-businesses-section"> <!-- ID remains for nav link -->
+    <div class="section-decor decor-3 circle"></div>
+    <div class="section-decor decor-3b triangle"></div>
     <div class="container">
         <div class="why-work-with-us-header">
             <div class="why-work-with-us-title">
@@ -211,6 +219,8 @@
   </section>
 
   <section class="industries" id="categories-section"> <!-- ID remains for nav link -->
+    <div class="section-decor decor-4 circle"></div>
+    <div class="section-decor decor-4b squiggle"></div>
     <div class="container">
         <div class="section-title">
             <h2>Categorías de descuentos populares</h2>
@@ -263,14 +273,21 @@
   </section>
 
   <section class="contact-us" id="contact-us-section">
+    <div class="section-decor decor-5 circle"></div>
+    <div class="section-decor decor-5b oval"></div>
     <div class="container">
-      <h2>¡Sé el primero en enterarte!</h2>
-      <p>Regístrate para recibir notificaciones sobre el lanzamiento de Dommio!, ofertas exclusivas y cómo tu empresa puede participar. Estudiantes, maestros y personal académico pueden registrarse.</p>
+      <h2>¡Registrate y se una parte de nuestra comunidad!</h2>
+      <p>Descubre cómo tu marca o negocio puede conectar con estudiantes a través de Dommio! y participar en nuestro lanzamiento. <br>Empresas y universidades ya pueden unirse a nuestra comunidad.</p>
       <form id="contactForm">
         <label for="from_name" class="visually-hidden">Tu Nombre</label>
         <input type="text" id="from_name" name="from_name" placeholder="Tu Nombre" required>
+
         <label for="from_email" class="visually-hidden">Tu Correo Electrónico</label>
         <input type="email" id="from_email" name="from_email" placeholder="Tu Correo Electrónico" required>
+
+        <label for="company" class="visually-hidden">Empresa/Universidad</label>
+        <input type="text" id="company" name="company" placeholder="Empresa/Universidad" required>
+
         <label for="user_type" class="visually-hidden">Soy un:</label>
         <select id="user_type" name="user_type" required>
             <option value="" disabled selected>Soy un...</option>
@@ -281,15 +298,17 @@
             <option value="student">Estudiante interesado</option>
             <option value="other">Otro</option>
         </select>
-        <label for="message" class="visually-hidden">Mensaje (opcional)</label>
-        <textarea id="message" name="message" placeholder="Mensaje (opcional)"></textarea>
+
+        <label for="message" class="visually-hidden">Mensaje</label>
+        <textarea id="message" name="message" placeholder="Mensaje" required></textarea>
+
         <button type="submit" id="submitButton">Enviar información</button>
         <div id="formResponse"></div>
       </form>
     </div>
   </section>
 
-  <section class="faq-section">
+  <section class="faq-section" id="faq-section">
     <div class="container">
         <h2>Preguntas frecuentes</h2>
         <div class="faq-item">
@@ -348,15 +367,15 @@
         <ul>
           <li><a href="#">Inicio</a></li>
           <li><a href="#how-it-works-section">¿Cómo funciona?</a></li>
-          <li><a href="#categories-section">Categorías de descuentos populares</a></li>
-          <li><a href="#for-businesses-section">Para empresas</a></li>
+          <li><a href="#categories-section">Categorías de descuentos</a></li>
+          <li><a href="#faq-section">Preguntas Frecuentes</a></li>
            <li><a href="#contact-us-section">Contacto</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Contacto</h3>
-        <p>Email: <a href="mailto:info@dommio.mx">info@dommio.mx</a> (Ejemplo)</p>
-        <p>Ciudad de México, México</p>
+        <p>Email: <a href="mailto:info@dommio.mx">info@dommio.mx</a></p>
+        <p>Querétaro, México</p>
       </div>
       <div class="footer-section social">
         <h3>Síguenos</h3>
@@ -365,7 +384,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2024 Dommio!. Todos los Derechos Reservados. <a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a> (Próximamente)</p>
+      <p>© 2025 Dommio!. Todos los Derechos Reservados.</p>
     </div>
   </footer>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>

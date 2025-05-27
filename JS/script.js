@@ -37,12 +37,21 @@ document.addEventListener('DOMContentLoaded', function() {
   const video = document.getElementById('heroVideo');
   const overlay = document.getElementById('heroOverlay');
   if (video) {
-      video.playbackRate = 0.90;
+      video.playbackRate = 0.75;
       video.play().then(() => {
           console.log("Video del héroe iniciado.");
       }).catch(error => {
           console.warn("Autoplay del video del héroe prevenido:", error);
       });
+
+      // Custom end 0.5s before actual end
+      video.addEventListener('timeupdate', function() {
+          if (video.duration && video.currentTime >= video.duration - 1.23) {
+              video.pause();
+              video.dispatchEvent(new Event('ended'));
+          }
+      });
+
       // Ensure overlay is always visible after video ends
       video.addEventListener('ended', function() {
           if (overlay) {
@@ -50,8 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
               overlay.style.opacity = '1';
           }
           // Fade out the video smoothly
-          video.style.transition = 'opacity 1.2s';
-          video.style.opacity = '0.25';
+          video.style.transition = 'opacity 2s';
+          video.style.opacity = '0.85';
       });
       // Make sure overlay is visible initially as well
       if (overlay) {
@@ -148,9 +157,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // !!! IMPORTANT: Replace with your ACTUAL EmailJS credentials if you use it !!!
         // For a pure informational page, you might not even need active form submission yet.
         // You could link the "Enviar" button to a mailto: link or a Google Form.
-        const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // Replace 'YOUR_PUBLIC_KEY' or leave for simulation
-        const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // Replace 'YOUR_SERVICE_ID'
-        const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // Replace 'YOUR_TEMPLATE_ID' (ensure template includes 'user_type')
+        const EMAILJS_PUBLIC_KEY = "lKexp3-c014Ddpsu3"; // Replace 'YOUR_PUBLIC_KEY' or leave for simulation
+        const EMAILJS_SERVICE_ID = "service_krpvgef"; // Replace 'YOUR_SERVICE_ID'
+        const EMAILJS_TEMPLATE_ID = "dommio_contact"; // Replace 'YOUR_TEMPLATE_ID' (ensure template includes 'user_type')
         // !!! ----------------------------------------------------------------------- !!!
 
         let emailJsInitialized = false;
