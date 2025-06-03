@@ -17,10 +17,10 @@
         <button class="mobile-menu-toggle" aria-label="Alternar menú de navegación">☰</button>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
+                
                 <li><a href="#plataforma">Plataforma</a></li>
-                <li><a href="#how-it-works-section">¿Cómo funciona?</a></li>
                 <li><a href="#categories-section">Categorías de descuentos</a></li>
+                <li><a href="#how-it-works-section">¿Cómo funciona?</a></li>
                 <li><a href="#faq-section">Preguntas Frecuentes</a></li>
             </ul>
         </nav>
@@ -45,7 +45,6 @@
     </div>
   </section>
 
-  <!-- Move Nuestra Plataforma Próximamente section here -->
   <section class="our-platform" id="plataforma">
     <div class="section-decor decor-1 circle"></div>
     <div class="section-decor decor-1b oval"></div>
@@ -81,6 +80,71 @@
                 <!-- INTEGRACIÓN DEMO REACT DOMMIO LOCAL: El siguiente iframe muestra la demo interactiva desde tu servidor local de React. -->
                 <iframe src="/demo/index.html" class="platform-iframe" style="width:100%;max-width:400px;height:600px;min-height:600px;max-height:600px;border-radius:16px;border:2px solid #E2E8F0;box-shadow:0 15px 35px rgba(44,62,80,0.10);background:#fff;overflow:hidden;" allowfullscreen loading="lazy"></iframe>
             </div>
+        </div>
+        <div class="category-slider-section" id="categories-section">
+          <div class="category-slider-wrapper">
+            <div class="category-slider">
+              <div class="category-slide" style="background-image:url('images/slider/comidaybebida.jpg');">
+                <div class="category-slide-overlay"></div>
+                <div class="category-slide-content">
+                  <h2>Comida y Bebida</h2>
+                </div>
+              </div>
+              <div class="category-slide" style="background-image:url('images/slider/fashion.jpg');">
+                <div class="category-slide-overlay"></div>
+                <div class="category-slide-content">
+                  <h2>Moda y Accesorios</h2>
+                </div>
+              </div>
+              <div class="category-slide" style="background-image:url('images/slider/technology.jpg');">
+                <div class="category-slide-overlay"></div>
+                <div class="category-slide-content">
+                  <h2>Tecnología</h2>
+                </div>
+              </div>
+              <div class="category-slide" style="background-image:url('images/slider/entertainment.jpg');">
+                <div class="category-slide-overlay"></div>
+                <div class="category-slide-content">
+                  <h2>Entretenimiento</h2>
+                </div>
+              </div>
+              <div class="category-slide" style="background-image:url('images/slider/viajes.jpg');">
+                <div class="category-slide-overlay"></div>
+                <div class="category-slide-content">
+                  <h2>Viajes y Transporte</h2>
+                </div>
+              </div>
+              <div class="category-slide" style="background-image:url('images/slider/salud.jpg');">
+                <div class="category-slide-overlay"></div>
+                <div class="category-slide-content">
+                  <h2>Salud y Lifestyle</h2>
+                </div>
+              </div>
+              <div class="category-slide" style="background-image:url('images/slider/financial.jpg');">
+                <div class="category-slide-overlay"></div>
+                <div class="category-slide-content">
+                  <h2>Servicios Financieros</h2>
+                </div>
+              </div>
+              <div class="category-slide" style="background-image:url('images/slider/books.jpg');">
+                <div class="category-slide-overlay"></div>
+                <div class="category-slide-content">
+                  <h2>Educación y Libros</h2>
+                </div>
+              </div>
+              <div class="category-slide" style="background-image:url('images/slider/adventure.jpg');">
+                <div class="category-slide-overlay"></div>
+                <div class="category-slide-content">
+                  <h2>Aventuras y Experiencias</h2>
+                </div>
+              </div>
+              <button class="category-slider-pause-inside" aria-label="Pausar slider"><i class="bi bi-pause-fill"></i></button>
+            </div>
+            <div class="category-slider-controls">
+              <button class="category-slider-arrow left" aria-label="Anterior categoría"><i class="bi bi-chevron-left"></i></button>
+              <button class="category-slider-arrow right" aria-label="Siguiente categoría"><i class="bi bi-chevron-right"></i></button>
+            </div>
+          </div>
         </div>
     </div>
   </section>
@@ -218,58 +282,58 @@
     </div>
   </section>
 
-  <section class="industries" id="categories-section"> <!-- ID remains for nav link -->
-    <div class="section-decor decor-4 circle"></div>
-    <div class="section-decor decor-4b squiggle"></div>
+  <section class="student-market-section" id="student-market-section">
+    <div class="section-decor decor-student-market circle"></div>
+    <div class="section-decor decor-student-market2 oval"></div>
+    <div class="section-decor decor-student-market3 squiggle"></div>
     <div class="container">
-        <div class="section-title">
-            <h2>Categorías de descuentos populares</h2>
-            <p>Encuentra ofertas de marcas líderes y negocios locales en una amplia variedad de categorías pensadas para ti. Estudiantes, maestros y personal académico pueden aprovecharlas.</p>
-        </div>
-        <div class="process-steps">
-          <div class="process-step">
-              <div class="icon-container">
-                  <i class="bi bi-egg-fried industry-icon"></i>
-              </div>
-              <h3>Comida y Bebida</h3>
-              <p>Restaurantes, cafeterías, comida rápida, supermercados y más.</p>
-          </div>
-          <div class="process-step">
-              <div class="icon-container">
-                   <i class="bi bi-pc-display industry-icon"></i>
-              </div>
-              <h3>Tecnología</h3>
-              <p>Laptops, software, accesorios, celulares y gadgets.</p>
-          </div>
-          <div class="process-step">
-                <div class="icon-container">
-                    <i class="bi bi-train-front-fill industry-icon"></i>
-                </div>
-                <h3>Viajes y Transporte</h3>
-                <p>Boletos de autobús, vuelos, hospedaje y servicios de transporte.</p>
-            </div>
-          <div class="process-step">
-              <div class="icon-container">
-                   <i class="bi bi-controller industry-icon"></i>
-              </div>
-              <h3>Entretenimiento</h3>
-              <p>Cine, conciertos, streaming, videojuegos y eventos.</p>
-          </div>
-          <div class="process-step">
-              <div class="icon-container">
-                   <i class="bi bi-universal-access industry-icon"></i>
-              </div>
-              <h3>Moda y Accesorios</h3>
-              <p>Ropa, calzado, joyería y artículos personales para tu estilo.</p>
-          </div>
-           <div class="process-step">
-              <div class="icon-container">
-                   <i class="bi bi-book-half industry-icon"></i>
-              </div>
-              <h3>Educación y Libros</h3>
-              <p>Material didáctico, cursos online, librerías y papelerías.</p>
-          </div>
+      <div class="section-header">
+        <h2>El mercado perfecto</h2>
+        <p>Descubre el verdadero potencial de la comunidad universitaria en México.</p>
       </div>
+      <div class="student-market-content">
+        <div class="student-market-facts student-market-facts-left">
+          <div class="student-market-fact">
+            <span class="fact-number">5M+</span>
+            <span class="fact-label">Estudiantes de Nivel Superior</span>
+          </div>
+          <div class="student-market-fact">
+            <span class="fact-number">6000+</span>
+            <span class="fact-label">Instituciones Educativas Superiores</span>
+          </div>
+          <div class="student-market-fact">
+            <span class="fact-number">94%</span>
+            <span class="fact-label">Usuarios de Internet (18-24 años)</span>
+          </div>
+        </div>
+        <div class="student-market-lottie">
+          <div class="lottie-glow"></div>
+          <dotlottie-player
+            src="https://lottie.host/32e370dc-4049-4b51-83a9-6a157c472726/AGVNhgngve.lottie"
+            background="transparent"
+            speed="1"
+            style="width: 100%; max-width: 400px; height: 420px; margin: 0 auto;"
+            loop
+            autoplay
+            class="student-lottie-animation"
+          ></dotlottie-player>
+        </div>
+        <div class="student-market-facts student-market-facts-right">
+          <div class="student-market-fact">
+            <span class="fact-number">500K+</span>
+            <span class="fact-label">Docentes de Nivel Superior</span>
+          </div>
+          <div class="student-market-fact">
+            <span class="fact-number">$170MMDP+</span>
+            <span class="fact-label">Gasto Estudiantil Anual (MXN)</span>
+          </div>
+          <div class="student-market-fact">
+            <span class="fact-number">+20%</span>
+            <span class="fact-label">Crecimiento Estudiantil Proy. (a 2030)</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="contact-us" id="contact-us-section">
@@ -476,6 +540,7 @@
   </footer>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="JS/script.js"></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </body>
 </html>
 

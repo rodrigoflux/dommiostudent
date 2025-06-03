@@ -224,4 +224,143 @@ document.addEventListener('DOMContentLoaded', function() {
   // Language Switcher Functionality REMOVED as it's Spanish only.
   // The 'translations' object is also removed.
 
+  // --- CATEGORY SLIDER LOGIC ---
+  const slider = document.querySelector('.category-slider');
+  const pauseBtn = document.querySelector('.category-slider-pause-inside');
+  const leftArrow = document.querySelector('.category-slider-arrow.left');
+  const rightArrow = document.querySelector('.category-slider-arrow.right');
+  let autoplayInterval = null;
+  let isPaused = false;
+  let autoplayDelay = 3500;
+
+  // Infinite scroll setup: clone slides
+  let slideW = 0;
+  let originalCount = 0;
+  if (slider) {
+    const slides = Array.from(slider.children);
+    originalCount = slides.length;
+    slides.forEach(slide => {
+      const clone = slide.cloneNode(true);
+      clone.classList.add('cloned');
+      slider.appendChild(clone);
+    });
+    // After DOM update, get slide width
+    slideW = slider.querySelector('.category-slide')?.offsetWidth || 340;
+    // Set initial scroll position to 0
+    slider.scrollLeft = 0;
+  }
+
+  function scrollToNextSlide() {
+    if (!slider) return;
+    // If at (or past) the end of the original slides, reset to start of originals
+    const maxScroll = slideW * originalCount;
+    if (slider.scrollLeft >= maxScroll) {
+      slider.scrollLeft = 0;
+    }
+    slider.scrollBy({ left: slideW, behavior: 'smooth' });
+  }
+  function scrollToPrevSlide() {
+    if (!slider) return;
+    // If at the start, jump to end of originals
+    if (slider.scrollLeft <= 0) {
+      slider.scrollLeft = slideW * originalCount;
+    }
+    slider.scrollBy({ left: -slideW, behavior: 'smooth' });
+  }
+
+  // Arrow controls
+  if (slider && leftArrow && rightArrow) {
+    leftArrow.addEventListener('click', () => {
+      scrollToPrevSlide();
+      pauseAutoplay();
+    });
+    rightArrow.addEventListener('click', () => {
+      scrollToNextSlide();
+      pauseAutoplay();
+    });
+  }
+
+  // Autoplay logic (fixed for pause button)
+  function startAutoplay() {
+    if (autoplayInterval) clearInterval(autoplayInterval);
+    autoplayInterval = setInterval(() => {
+      if (!isPaused) scrollToNextSlide();
+    }, autoplayDelay);
+  }
+  function pauseAutoplay() {
+    isPaused = true;
+    if (pauseBtn) pauseBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
+    if (autoplayInterval) clearInterval(autoplayInterval);
+  }
+  function resumeAutoplay() {
+    isPaused = false;
+    if (pauseBtn) pauseBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
+    startAutoplay();
+  }
+  if (pauseBtn) {
+    pauseBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (isPaused) {
+        resumeAutoplay();
+      } else {
+        pauseAutoplay();
+      }
+    });
+  }
+  // Start autoplay on load
+  startAutoplay();
+  if (pauseBtn) pauseBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
+
+  // Swipe support for mobile
+  let isDown = false, startX, scrollLeft;
+  if (slider) {
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      slider.classList.add('dragging');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+      pauseAutoplay();
+    });
+    slider.addEventListener('mouseleave', () => {
+      isDown = false;
+      slider.classList.remove('dragging');
+    });
+    slider.addEventListener('mouseup', () => {
+      isDown = false;
+      slider.classList.remove('dragging');
+    });
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 1.2;
+      slider.scrollLeft = scrollLeft - walk;
+    });
+    // Touch events for mobile
+    slider.addEventListener('touchstart', (e) => {
+      isDown = true;
+      startX = e.touches[0].pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+      pauseAutoplay();
+    });
+    slider.addEventListener('touchend', () => {
+      isDown = false;
+    });
+    slider.addEventListener('touchmove', (e) => {
+      if (!isDown) return;
+      const x = e.touches[0].pageX - slider.offsetLeft;
+      const walk = (x - startX) * 1.2;
+      slider.scrollLeft = scrollLeft - walk;
+    });
+    // Pause on hover (desktop)
+    slider.addEventListener('mouseenter', pauseAutoplay);
+    slider.addEventListener('mouseleave', resumeAutoplay);
+  }
+
+  // Make sure to start with pause icon
+  if (pauseBtn) pauseBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
+
+  // --- Lottie Animation for Student Market Section ---
+  // (Removed: now using dotLottie player via HTML tag)
+
 }); // End DOMContentLoaded
